@@ -4,6 +4,7 @@ import { themeSettings } from "./theme";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "@/scenes/navbar";
 import Dashboard from "@/scenes/dashboard";
+import Predictions from "@/scenes/predictions";
 
 function App() {
   const theme = useMemo(() => createTheme(themeSettings), []); // useMemo用来保证函数createTheme仅仅在组件加载时调用一次
@@ -25,10 +26,7 @@ function App() {
             {/* react路由标题及路径 */}
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route
-                path="/predictions"
-                element={<div>predication page</div>}
-              />
+              <Route path="/predictions" element={<Predictions />} />
             </Routes>
           </Box>
         </ThemeProvider>

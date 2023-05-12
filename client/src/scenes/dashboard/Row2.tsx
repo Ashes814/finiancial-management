@@ -27,10 +27,15 @@ const pieData = [
 
 const Row2 = () => {
   const { palette } = useTheme();
+
+  // define pie Colors
   const pieColors = [palette.primary[800], palette.primary[300]];
+
+  // RTK get data
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
 
+  // structured data - operational
   const operationalExpenses = useMemo(() => {
     return (
       operationalData &&
@@ -46,6 +51,7 @@ const Row2 = () => {
     );
   }, [operationalData]);
 
+  // structured data - product expense
   const productExpenseData = useMemo(() => {
     return (
       productData &&
