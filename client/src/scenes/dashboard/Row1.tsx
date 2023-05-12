@@ -166,6 +166,8 @@ const Row1 = () => {
               tickLine={false}
               style={{ fontSize: "10px" }}
             />
+
+            {/* 2 yaxis */}
             <YAxis
               yAxisId="left"
               tickLine={false}
@@ -180,6 +182,8 @@ const Row1 = () => {
               style={{ fontSize: "10px" }}
             />
             <Tooltip />
+
+            {/* set legend for 2 lines */}
             <Legend
               height={20}
               wrapperStyle={{
